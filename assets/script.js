@@ -7,31 +7,30 @@ const loanPrinciple = document.querySelector(".loan_principle");
 const loanTotal = document.querySelector(".loan_total");
 const loanInterest = document.querySelector(".loan_interest_rate");
 
-const submitBtn = document.querySelector(".calclulator-btn");
+const submitBtn = document.querySelector(".calculator-btn");
 
 submitBtn.addEventListener("click", function () {
   amount = loanAmount.value;
-  tenure = loanTenure.value * 12; // 1 ano = 12 meses
-  rate = loanRate.value / 12 / 100; // taxa de emprestimo por ano dividido por 100 que é igual a porcentagem
+  tenure = loanTenure.value * 12; // 1 Ano = 12 meses
+  rate = loanRate.value / 12 / 100; // loan rate por ano / 100 = porcentagem do emprestimo
 
   emi = (amount * rate * (1 + rate) ** tenure) / ((1 + rate) ** tenure - 1);
-  //console.log(emi)
-  total = emi * tenure; // valor total a pagar ncluindo juros
+  //console.log(emi);
+  total = emi * tenure; // Valor total a pagar incluindo juros
   interest = total - amount; // interest = total amount - principle amount
-  // console.log(total)
-  //console.log(interest)
+  // console.log(total);
+  //console.log(interest);
 
   loanEmi.innerHTML = Math.floor(emi);
   loanPrinciple.innerHTML = Math.floor(amount);
   loanTotal.innerHTML = Math.floor(total);
   loanInterest.innerHTML = Math.floor(interest);
 
-  //Gráfico de Empréstimos
-
-  let xValues = ["Principle", "Interest"];
+  //Loanchart
+  let xValues = ["Valor do Empréstimo", "Valor de Juros"];
   let yValues = [amount, Math.floor(interest)];
 
-  let barColors = ["#962151", "#000000"];
+  let barColors = ["#961251", "#000000"];
 
   new Chart("loanChart", {
     type: "pie",
@@ -39,7 +38,7 @@ submitBtn.addEventListener("click", function () {
       labels: xValues,
       datasets: [
         {
-          background: barColors,
+          backgroundColor: barColors,
           data: yValues,
         },
       ],

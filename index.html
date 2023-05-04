@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de empréstimo / Javascript</title>
+
+    <!--Stylesheet-->
     <link rel="stylesheet" href="./assets/styles.css" />
-    <!--Biblioteca para visualização dos dados-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <title>Calculadora de Empréstimos</title>
   </head>
+
   <body>
     <div class="wrapper">
       <h2>Calculadora de Empréstimos</h2>
@@ -19,30 +21,29 @@
           <input type="number" id="loan_amount" />
         </div>
         <div class="calculator-input">
-          <label for="">Prazo do Empréstimo (Anos): </label>
-          <input type="number" id="loan-tenure" />
+          <label for="">Tempo de Empréstimo (Ano(s)):</label>
+          <input type="number" id="loan_tenure" />
         </div>
         <div class="calculator-input">
           <label for="">Taxa de Juros (%):</label>
-          <input type="number" id="loan-interest" />
+          <input type="number" id="loan_interest" />
         </div>
         <div class="calculator-input">
-          <button class="calculator-btn">Calcular Emp</button>
+          <button class="calculator-btn">Calcular Empréstimo</button>
         </div>
       </div>
 
       <div class="calculator-result">
-        <!-- CANVAS -->
-        <canvas class="loanChart"></canvas>
+        <!---Canvas-->
+        <canvas id="loanChart"></canvas>
         <ul>
-          <li>Emprestimo Mensal: <span class="loan-emi"></span></li>
-          <li>Valor Principal: <span class="loan-principle"></span></li>
-          <li>Emprestimo a juros: <span class="loan-interest_rate"></span></li>
-          <li>Valor a ser pago: <span class="loan-total"></span></li>
+          <li>Empréstimo Mensal: <span class="loan_emi"></span></li>
+          <li>Valor do empréstimo: <span class="loan_principle"></span></li>
+          <li>Valor sobre juros: <span class="loan_interest_rate"></span></li>
+          <li>Valor total a ser Pago: <span class="loan_total"></span></li>
         </ul>
       </div>
     </div>
-
     <script src="./assets/script.js"></script>
   </body>
 </html>
