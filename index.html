@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Empréstimos</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Calculadora de Empréstimos</h2>
+      <span class="div-bar"></span>
+      <div class="calculator">
+        <div class="calculator-input">
+          <label for="">Valor do Empréstimo (R$):</label>
+          <input type="number" id="loan_amount" />
+        </div>
+        <div class="calculator-input">
+          <label for="">Prazo do Empréstimo (Anos): </label>
+          <input type="number" id="loan-tenure" />
+        </div>
+        <div class="calculator-input">
+          <label for="">Taxa de Juros (%):</label>
+          <input type="number" id="loan-interest" />
+        </div>
+        <div class="calculator-input">
+          <button class="calculator-btn">Calcular Emp</button>
+        </div>
+      </div>
+
+      <div class="calculator-result">
+        <!-- CANVAS -->
+        <canvas class="loanChart"></canvas>
+        <ul>
+          <li>Emprestimo Mensal: <span class="loan-emi"></span></li>
+          <li>Valor Principal: <span class="loan-principle"></span></li>
+          <li>Emprestimo a juros: <span class="loan-interest_rate"></span></li>
+          <li>Valor a ser pago: <span class="loan-total"></span></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
