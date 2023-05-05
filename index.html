@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de empréstimo / Javascript</title>
 
-    <!--Stylesheet-->
     <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Biblioteca Chart.js para a visualização do gráfico -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </head>
 
@@ -16,6 +16,7 @@
       <h2>Calculadora de Empréstimos</h2>
       <span class="div-bar"></span>
       <div class="calculator">
+        <!-- Entradas da calaculadora -->
         <div class="calculator-input">
           <label for="">Valor do Empréstimo (R$):</label>
           <input type="number" id="loan_amount" />
@@ -34,8 +35,10 @@
       </div>
 
       <div class="calculator-result">
-        <!---Canvas-->
+        <!---Elemento Canvas para visualização do gráfico-->
         <canvas id="loanChart"></canvas>
+
+        <!-- Resultado do cálculo -->
         <ul>
           <li>Empréstimo Mensal: <span class="loan_emi"></span></li>
           <li>Valor do empréstimo: <span class="loan_principle"></span></li>
@@ -44,6 +47,8 @@
         </ul>
       </div>
     </div>
+
+    <!--Importando o aarquivo de script Javascript-->
     <script src="./assets/script.js"></script>
   </body>
 </html>
